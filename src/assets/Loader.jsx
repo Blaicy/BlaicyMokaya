@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from '/logo.png'
 
 const Loader = ({ onFinish }) => {
   const [loading, setLoading] = useState(true);
@@ -42,7 +43,7 @@ const Loader = ({ onFinish }) => {
           exit={{ opacity: 0, transition: { duration: 0.8 } }}
         >
           <motion.img
-            src="/logo.png"
+            src={logo}
             alt="Logo"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1, rotate: 360 }}
