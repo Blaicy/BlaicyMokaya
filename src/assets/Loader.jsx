@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "/logo.png";
 
 const Loader = ({ onFinish }) => {
   const [loading, setLoading] = useState(true);
@@ -45,21 +44,16 @@ const Loader = ({ onFinish }) => {
   return (
     <AnimatePresence>
       {loading && (
-        <motion.div
-          className="fixed inset-0 flex items-center justify-center z-50 bg-black"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.8 } }}
-        >
-          <motion.img
-            src={logo}
-            alt="Logo"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1, rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-            className="w-24 h-24"
-          />
-        </motion.div>
+        <div className="fixed inset-0 flex items-center justify-center">
+          <motion.img src = {`${import.meta.env.BASE_URL}logo.png`} alt='Logo'
+          className="w-24 h-24 object-contain"
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "linear"
+          }} />
+        </div>
       )}
     </AnimatePresence>
   );
