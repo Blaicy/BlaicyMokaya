@@ -1,16 +1,12 @@
 import React from 'react'
 import { easeIn, motion, spring } from 'framer-motion'
-import githubLlogo from '/github.png'
-import instagramLlogo from '/instagram.png'
-import linkedInLogo from '/linkedin.png'
-import twitterLogo from '/twitter.png'
 
 const lineVariant = {
   hidden: { scaleX: 0 },
   visible: {
     scaleX: 1,
     opacity: 0.5,
-    transition: { duration: 2, delay: 2, ease: 'easeOut' },
+    transition: { duration: 2, delay: 1, ease: 'easeOut' },
   },
 }
 
@@ -55,11 +51,11 @@ const About = () => {
             interfaces. My focus is on building experiences that are visually
             engaging, intuitive, and optimized for all users and devices.
           </p>
-          <div className="flex flex-row sm:flex-row sm:items-center sm:space-x-2">
+          <div className="flex flex-row items-center space-x-2">
             <span className="bg-white aspect-square h-1 w-1"></span>
             <p>Languages: HTML, CSS, JavaScript</p>
           </div>
-          <div className="flex flex-row sm:flex-row sm:items-center sm:space-x-2">
+          <div className="flex flex-row items-center space-x-2">
             <span className="bg-white aspect-square h-1 w-1 "></span>
             <p>Frameworks/Libraries: React, TailwindCSS, Framer Motion</p>
           </div>
@@ -81,12 +77,12 @@ const About = () => {
             technologies, I focus on performance, scalability, and
             security—making sure applications run reliably and efficiently.
           </p>
-          <div className="flex flex-row sm:flex-row sm:items-center sm:space-x-2">
+          <div className="flex flex-row items-center space-x-2">
             <span className="bg-white aspect-square h-1 w-1"></span>
             <p>Languages: Python | Mongo DB</p>
           </div>
-          <div className="flex flex-row sm:flex-row sm:items-center sm:space-x-2">
-            <span className="bg-white aspect-square h-1 w-1 "></span>
+          <div className="flex flex-row items-center space-x-2">
+            <span className="bg-white aspect-square h-1 w-1"></span>
             <p>Frameworks/Libraries: Django</p>
           </div>
         </div>
@@ -121,15 +117,15 @@ const About = () => {
           <p>
             Tools I'm conversant with:
           </p>
-          <div className="flex flex-row sm:flex-row sm:items-center sm:space-x-2">
+         <div className="flex flex-row items-center space-x-2">
             <span className="bg-white aspect-square h-1 w-1"></span>
             <p>VS Code – My go-to editor, customized with extensions and Git integration.</p>
           </div>
-          <div className="flex flex-row sm:flex-row sm:items-center sm:space-x-2">
+          <div className="flex flex-row items-center space-x-2">
             <span className="bg-white aspect-square h-1 w-1"></span>
             <p>Git & GitHub – Familiar with version control, branching, and collaborative workflows.</p>
           </div>
-          <div className="flex flex-row sm:flex-row sm:items-center sm:space-x-2">
+          <div className="flex flex-row items-center space-x-2">
             <span className="bg-white aspect-square h-1 w-1"></span>
             <p>Canva – Handy for designing quick visuals, social media posts, and UI concepts.</p>
           </div>

@@ -17,11 +17,11 @@ const buttonVariant = {
 
 const MainPage = () => {
   return (
-    <section className="min-h-screen p-5 sm:p-5 lg:p-10 ">
+    <section className="min-h-screen p-2 sm:p-2 lg:p-5 ">
       <motion.div className="flex flex-row items-center space-x-2 p-5">
         <motion.img 
           src = {`${import.meta.env.BASE_URL}logo.png`} alt='Logo'
-          className="w-6 sm:w-10 lg:w-18"/>
+          className=" w-8 sm:w-12 lg:w-20 "/>
         <motion.h1 
           className="font-bold text-xl sm:text-1xl lg:text-2xl text-center sm:text-left"
           initial={{ x: '100vw' }}
@@ -31,7 +31,7 @@ const MainPage = () => {
         </motion.h1>
       </motion.div>
       <motion.div 
-        className="mt-20 flex flex-col items-center justify-evenly space-y-5 sm:space-y-8"
+        className="mt-15 flex flex-col items-center justify-evenly space-y-5 sm:space-y-8"
         variants={bodyVariant}
         initial="hidden"
         animate="visible">
