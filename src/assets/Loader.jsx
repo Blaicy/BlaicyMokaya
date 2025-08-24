@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from '/logo.png'
+import logo from "/logo.png";
 
 const Loader = ({ onFinish }) => {
   const [loading, setLoading] = useState(true);
@@ -8,28 +8,37 @@ const Loader = ({ onFinish }) => {
   useEffect(() => {
     let loadDone = false;
     let minTimeDone = false;
+    let maxTimeoutDone = false;
 
     const tryFinish = () => {
-      if (loadDone && minTimeDone) {
+      if ((loadDone && minTimeDone) || maxTimeoutDone) {
         setLoading(false);
         onFinish();
-        console.log("✅ Preloader finished with fade-out");
+        console.log("✅ Preloader finished");
       }
     };
+
     const handleLoad = () => {
       loadDone = true;
       tryFinish();
     };
 
     window.addEventListener("load", handleLoad);
+
     const timer = setTimeout(() => {
       minTimeDone = true;
       tryFinish();
     }, 2000);
 
+    const maxTimer = setTimeout(() => {
+      maxTimeoutDone = true;
+      tryFinish();
+    }, 5000);
+
     return () => {
       window.removeEventListener("load", handleLoad);
       clearTimeout(timer);
+      clearTimeout(maxTimer);
     };
   }, [onFinish]);
 
@@ -37,7 +46,7 @@ const Loader = ({ onFinish }) => {
     <AnimatePresence>
       {loading && (
         <motion.div
-          className="fixed inset-0 flex items-center justify-center z-50"
+          className="fixed inset-0 flex items-center justify-center z-50 bg-black"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.8 } }}

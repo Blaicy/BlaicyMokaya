@@ -202,28 +202,28 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 sm:w-10 h-8 sm:h-10 hover:opacity-50">
-            <img src={twitterLogo} alt='twitter'/>
+            <img src={`${import.meta.env.BASE_URL}twitter.png`} alt='twitter'/>
           </a>
           <a
             href="https://www.instagram.com/_blaicy"
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 sm:w-10 h-8 sm:h-10 hover:opacity-50">
-            <img src={instagramLlogo} alt='instagram'/>
+            <img src={`${import.meta.env.BASE_URL}instagram.png`} alt='instagram'/>
           </a>
           <a
             href="https://www.linkedin.com/in/blaicymokaya"
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 sm:w-10 h-8 sm:h-10 hover:opacity-50">
-            <img src={linkedInLogo} alt='linkedIn'/>
+            <img src={`${import.meta.env.BASE_URL}linkedin.png`} alt='linkedIn'/>
           </a>
           <a
             href="https://github.com/Blaicy"
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 sm:w-10 h-8 sm:h-10 hover:opacity-50">
-            <img src={githubLlogo} alt='github'/>
+            <img src={`${import.meta.env.BASE_URL}github.png`} alt='github'/>
           </a>
         </div>
       </motion.div>

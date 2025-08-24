@@ -2,11 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom';
 import { FaMapPin } from "react-icons/fa";
-import logo from '/logo.png'
-import githubLlogo from '/github.png'
-import instagramLlogo from '/instagram.png'
-import linkedInLogo from '/linkedin.png'
-import twitterLogo from '/twitter.png'
 
 const bodyVariant = {
   hidden: { opacity: 0 },
@@ -41,7 +36,7 @@ const MainPage = () => {
     <div className="p-5 sm:p-10 lg:p-20 min-h-screen">
       <motion.div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-3 sm:space-y-0">
         <motion.img 
-          src={logo} alt='Logo'
+          src = {`${import.meta.env.BASE_URL}logo.png`} alt='Logo'
           className="w-16 sm:w-20 lg:w-28"
           initial={{ x: "-100vw", rotate: 0 }}
           animate={{ x: 0, rotate: [0, 90, 0, -90, 0] }}
@@ -119,16 +114,16 @@ const MainPage = () => {
 
         <div className="flex flex-wrap justify-center space-x-4 mt-5">
           <a href="https://www.X.com/98_Howie" target="_blank" rel="noopener noreferrer" className="w-8 sm:w-10 lg:w-12 h-8 sm:h-10 lg:h-12 hover:opacity-50">
-            <img src={twitterLogo} alt='twitter' />
+            <img src={`${import.meta.env.BASE_URL}twitter.png`} alt="twitter" />
           </a>
           <a href="https://www.instagram.com/_blaicy" target="_blank" rel="noopener noreferrer" className="w-8 sm:w-10 lg:w-12 h-8 sm:h-10 lg:h-12 hover:opacity-50">
-            <img src={instagramLlogo} alt='instagram'/>
+            <img src={`${import.meta.env.BASE_URL}instagram.png`} alt='instagram'/>
           </a>
           <a href="https://www.linkedin.com/in/blaicymokaya" target="_blank" rel="noopener noreferrer" className="w-8 sm:w-10 lg:w-12 h-8 sm:h-10 lg:h-12 hover:opacity-50">
-            <img src={linkedInLogo} alt='linkedIn'/>
+            <img src={`${import.meta.env.BASE_URL}linkedin.png`} alt='linkedIn'/>
           </a>
           <a href="https://github.com/Blaicy" target="_blank" rel="noopener noreferrer" className="w-8 sm:w-10 lg:w-12 h-8 sm:h-10 lg:h-12 hover:opacity-50">
-            <img src={githubLlogo} alt='github'/>
+            <img src={`${import.meta.env.BASE_URL}github.png`} alt='github'/>
           </a>
         </div>
       </motion.div>

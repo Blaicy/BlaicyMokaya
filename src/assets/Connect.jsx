@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FaTelegramPlane } from "react-icons/fa";
-import emailLogo from '/email.png'
-import githubLlogo from '/github.png'
-import instagramLlogo from '/instagram.png'
-import linkedInLogo from '/linkedin.png'
-import twitterLogo from '/twitter.png'
 
 const Connect = () => {
   const [displayedText, setDisplayedText] = useState("");
@@ -41,7 +36,7 @@ const Connect = () => {
                     initial={{x:'100vw'}}
                     animate={{ x: 0, transition: { type: 'spring', stiffness: 30, delay: 1, duration: 2 } }}
                     whileHover={{ originX:0, scale: 1.2, transition: { duration: 0.2 } }}>
-                      <img src={emailLogo} className='w-6 h-6 md:w-7 md:h-7'/>
+                      <img src={`${import.meta.env.BASE_URL}email.png`} className='w-6 h-6 md:w-7 md:h-7'/>
                         <a 
                           href="https://mail.google.com/mail/?view=cm&fs=1&to=blaicymokaya@gmail.com"  
                           target="_blank" 
@@ -54,7 +49,7 @@ const Connect = () => {
                     initial={{x:'100vw'}}
                     animate={{ x: 0, transition: { type: 'spring', stiffness: 30, delay: 1.5, duration: 2 } }}
                     whileHover={{ originX:0, scale: 1.2, transition: { duration: 0.2 } }}>
-                      <img src={instagramLlogo} className='w-6 h-6 md:w-7 md:h-7'/>
+                      <img src={`${import.meta.env.BASE_URL}instagram.png`} className='w-6 h-6 md:w-7 md:h-7'/>
                         <a 
                           href="https://www.instagram.com/_blaicy"
                           target="_blank" 
@@ -67,7 +62,7 @@ const Connect = () => {
                     initial={{x:'100vw'}}
                     animate={{ x: 0, transition: { type: 'spring', stiffness: 30, delay: 2, duration: 2 } }}
                     whileHover={{ originX:0, scale: 1.2, transition: { duration: 0.2 } }}>
-                      <img src={linkedInLogo} className='w-6 h-6 md:w-7 md:h-7'/>
+                      <img src={`${import.meta.env.BASE_URL}linkedin.png`} className='w-6 h-6 md:w-7 md:h-7'/>
                         <a 
                           href="https://www.linkedin.com/in/blaicymokaya" 
                           target="_blank" 
@@ -80,7 +75,7 @@ const Connect = () => {
                     initial={{x:'100vw'}}
                     animate={{ x: 0, transition: { type: 'spring', stiffness: 30, delay: 2.5, duration: 2 } }}
                     whileHover={{ originX:0, scale: 1.2, transition: { duration: 0.2 } }}>
-                      <img src={githubLlogo} className='w-6 h-6 md:w-7 md:h-7'/>
+                      <img src={`${import.meta.env.BASE_URL}github.png`} className='w-6 h-6 md:w-7 md:h-7'/>
                         <a 
                           href="https://github.com/Blaicy"
                           target="_blank" 
@@ -93,7 +88,7 @@ const Connect = () => {
                     initial={{x:'100vw'}}
                     animate={{ x: 0, transition: { type: 'spring', stiffness: 30, delay: 3, duration: 2 } }}
                     whileHover={{ originX:0, scale: 1.2, transition: { duration: 0.2 } }}>
-                      <img src={twitterLogo} className='w-6 h-6 md:w-7 md:h-7'/>
+                      <img src={`${import.meta.env.BASE_URL}twitter.png`} className='w-6 h-6 md:w-7 md:h-7'/>
                         <a 
                           href="https://www.X.com/98_Howie" 
                           target="_blank" 
